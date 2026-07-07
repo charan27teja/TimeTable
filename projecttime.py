@@ -15,7 +15,7 @@ class TIMETABLE:
             print(subjects)
 excel=pd.read_excel(r"C:\Users\sai\OneDrive\Documents\R1 I B.Tech-II Sem Time Table 2025-26.xlsx",sheet_name=None,skiprows=4)
 grp=print("CivilEngineering\nEEE\nMechanical\nECE-(A,B,C,D,E,F,G)\nCSE-(A,B,C,D,E,F,G,H,I)\nIT-(A,B,C,D)\nCS\nAIML-(A,B,C,D,E)\nDS-(A,B,C)")
-grp_input=input("Enter your group: ").upper()
+grp_input="AIML-B"
 from datetime import datetime
 now = datetime.now()
 day= now.strftime("%A").upper()
