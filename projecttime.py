@@ -26,6 +26,6 @@ get=TIMETABLE(excel,grp_input,day)
 output=get.group()
 webhook_url=os.environ.get("DISCORD_WEBHOOK_URL")
 if webhook_url:
-    message=f"**Daily Timetable ({day})**\n'''\n{output}\n'''"
+    message=f"**Daily Timetable ({day})**\n```\n{output}\n```"
     requests.post(webhook_url,json={"content":message})
     
