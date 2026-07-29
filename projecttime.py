@@ -20,6 +20,8 @@ class TIMETABLE:
                 if not str(col).startswith("Unnamed")
             ]
             subjects=subjects[clean_cols]
+            subjects_verical=subjects.T
+            subjects_vertical.columns=["Subjects"]
             print(subjects)
             return subjects.to_string(index=False)
 excel=pd.read_excel(r"AIML-II-1- SEM TIME TABLE_ II year_17-07-2026 _final (1) (1) (2).xlsx",sheet_name=None,skiprows=6)
