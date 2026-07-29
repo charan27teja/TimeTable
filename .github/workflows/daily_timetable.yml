@@ -25,4 +25,7 @@ jobs:
         pip install pandas openpyxl
 
     - name: Execute Timetable Script
+      env:
+       DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       run: python projecttime.py
+      
