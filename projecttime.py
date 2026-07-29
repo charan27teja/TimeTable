@@ -15,6 +15,7 @@ class TIMETABLE:
             sheet["Day"] = sheet["Day"].str.strip().str.replace("\n", "", regex=True)
             subjects=sheet.loc[sheet["Day"]==self.Today]
             print(subjects)
+            return subjects.to_string()
 excel=pd.read_excel(r"R1 I B.Tech-II Sem Time Table 2025-26.xlsx",sheet_name=None,skiprows=4)
 #grp=print("CivilEngineering\nEEE\nMechanical\nECE-(A,B,C,D,E,F,G)\nCSE-(A,B,C,D,E,F,G,H,I)\nIT-(A,B,C,D)\nCS\nAIML-(A,B,C,D,E)\nDS-(A,B,C)")
 grp_input="AIML-B"
