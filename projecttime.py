@@ -1,4 +1,6 @@
 import pandas as pd
+import requests
+import os
 class TIMETABLE:
     def __init__(self,Excel,Sheet,Today):
         self.Excel=Excel
@@ -20,4 +22,9 @@ from datetime import datetime
 now = datetime.now()
 day= now.strftime("%A").upper()
 get=TIMETABLE(excel,grp_input,day) 
-get.group()
+output=get.group()
+webhook_url=os.environ.get("DISCORD_WEBHOOK_URL")
+if webhook_url:
+    message=f"**Daily Timetable ({day})**\n'''\n{output}\n'''"
+    requests.post(webhook_url,json={"content":message})
+    
