@@ -15,7 +15,7 @@ class TIMETABLE:
             sheet["Day"] = sheet["Day"].str.strip().str.replace("\n", "", regex=True)
             subjects=sheet.loc[sheet["Day"]==self.Today[:3]]
             clean_cols=[
-                cols
+                col
                 for col in subjects.columns
                 if not str(col).startswith("Unnamed")
             ]
