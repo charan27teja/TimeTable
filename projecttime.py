@@ -20,7 +20,7 @@ class TIMETABLE:
                 if not str(col).startswith("Unnamed")
             ]
             subjects=subjects[clean_cols]
-            subjects_verical=subjects.T
+            subjects_vertical=subjects.T
             subjects_vertical.columns=["Subjects"]
             print(subjects_vertical)
             return subjects_vertical.to_string(index=False)
