@@ -3,7 +3,8 @@ name: Daily Timetable Notification
 on:
   schedule:
     # This runs every day at 01:30 AM UTC (exactly 7:00 AM Indian Standard Time)
-    - cron: '30 1 * * *'
+    - cron: '17 1 * * *'
+    - cron: '47 1 * * *'
   workflow_dispatch: # Allows us to manually click a button on GitHub to test run it anytime
 
 jobs:
